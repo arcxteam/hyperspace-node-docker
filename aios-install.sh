@@ -42,7 +42,7 @@ handle_error() {
 # Function to get the private key
 get_private_key() {
     log_message "${CYAN}Preparing private key...${RESET}"
-    read -p "Enter your private key: " private_key
+    read -p "Masuk bang enter your private key: " private_key
     echo -e "$private_key" > /root/my.pem
     chmod 600 /root/my.pem
     log_message "${GREEN}Private key saved as my.pem and permissions set correctly.${RESET}"

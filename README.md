@@ -12,7 +12,7 @@ GitHub: [http://github.com/hyperspaceai](http://github.com/hyperspaceai)
 ### 2. Activate the Node  
 1. Select the model at arrow 1. Then, find and toggle the red switch at arrow 2. After this action, a message will pop up: "Allocated and ready to accept challenges." The system will automatically configure the settings. Please be patient for a few minutes until the configuration is complete.  
 
-![image]
+![Node-Web-by-hyperspace-01-23-2025_02_31_AM](https://github.com/user-attachments/assets/0925c02d-e3c1-45b5-a496-c363971fb787)
 
 2. You can choose one of the following two methods to run your node:  
    - **Using Browser:** Run the node directly in the browser without downloading any additional software.  

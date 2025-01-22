@@ -5,7 +5,9 @@ HyperspaceAI is building a browser-based blockchain supercomputer designed to pr
 ## Joining Steps  
 ### 1. Visit the Official Website  
 First, open your browser and visit the following URL:  
-[http://node.hyper.space](http://node.hyper.space)
+[http://node.hyper.space](http://node.hyper.space) 
+
+i used low model but good inferences.... `Llama-3.2-1B-Instruct-q4f16_1-MLC` this only 1.1 GB
 
 GitHub: [http://github.com/hyperspaceai](http://github.com/hyperspaceai)
 

@@ -42,7 +42,7 @@ handle_error() {
 # Function to get the private key
 get_private_key() {
     log_message "${CYAN}Preparing private key...${RESET}"
-    read -p "Masuk bang enter your private key: " private_key
+    read -p "Masukkan private key Anda: " private_key
     echo -e "$private_key" > /root/my.pem
     chmod 600 /root/my.pem
     log_message "${GREEN}Private key saved as my.pem and permissions set correctly.${RESET}"
@@ -94,16 +94,16 @@ check_daemon_status() {
     fi
 }
 
-# Function to install local model
+# Function to install local model (Update model path here)
 install_local_model() {
     log_message "${BLUE}Installing local model...${RESET}"
-    docker exec -i aios-container /app/aios-cli models add hf:TheBloke/Mistral-7B-Instruct-v0.1-GGUF:mistral-7b-instruct-v0.1.Q4_K_S.gguf || handle_error "Failed to install local model."
+    docker exec -i aios-container /app/aios-cli models add hf:mlc-ai/Llama-3.2-1B-Instruct-q4f16_1-MLC || handle_error "Failed to install local model."
 }
 
-# Function to run inference
+# Function to run inference (Update model path here)
 run_infer() {
     log_message "${BLUE}Running inference...${RESET}"
-    retry docker exec -i aios-container /app/aios-cli infer --model hf:TheBloke/Mistral-7B-Instruct-v0.1-GGUF:mistral-7b-instruct-v0.1.Q4_K_S.gguf --prompt "What is 'Artificial Intelligence'?" || handle_error "Inference task failed."
+    retry docker exec -i aios-container /app/aios-cli infer --model hf:mlc-ai/Llama-3.2-1B-Instruct-q4f16_1-MLC --prompt "What is 'Artificial Intelligence'?" || handle_error "Inference task failed."
     log_message "${GREEN}Inference task completed successfully.${RESET}"
 }
 
@@ -119,7 +119,7 @@ hive_login() {
 # Function to run Hive inference
 run_hive_infer() {
     log_message "${BLUE}Running Hive inference...${RESET}"
-    retry docker exec -i aios-container /app/aios-cli hive infer --model hf:TheBloke/Mistral-7B-Instruct-v0.1-GGUF:mistral-7b-instruct-v0.1.Q4_K_S.gguf --prompt "Explain what a server is in simple terms." || handle_error "Hive inference task failed."
+    retry docker exec -i aios-container /app/aios-cli hive infer --model hf:mlc-ai/Llama-3.2-1B-Instruct-q4f16_1-MLC --prompt "Explain what a server is in simple terms." || handle_error "Hive inference task failed."
     log_message "${GREEN}Hive inference task completed successfully.${RESET}"
 }
 
